@@ -1,0 +1,9 @@
+.UserListHeader{
+    height: 45px;
+    padding-top: 15px;
+    background-color: midnightblue;
+    padding-left: 40px;
+    font-size: 25px;
+    font-family: monospace;
+    color: antiquewhite;
+}
