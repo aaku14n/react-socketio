@@ -1,9 +1,10 @@
 import { combineReducers } from "redux";
-// import userReducers from "./userReducers";
-// import activeUser from "./activeReducers";
+import UserNameReducers from "./UserNameReducers";
+import UserListReducers from "./UserListReducers";
 
 const allReducers = combineReducers({
-  users: 'aakarsh'
+  name:UserNameReducers,
+  userList: UserListReducers
 //   activeUser: activeUser
 });
 export default allReducers;
