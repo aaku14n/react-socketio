@@ -1,5 +1,7 @@
 import React from "react";
 import UserChatHeader from "./UserChatHeader";
+import UserChatBodyContainer from "../containers/UserChatBodyContainer";
+import UserChatTextBoxContainer from "../containers/UserChatTextBoxContainer"
 import "./css/UserChat.css";
 
 class UserChat extends React.Component{
@@ -9,6 +11,8 @@ class UserChat extends React.Component{
          : 
          <div className="UserChat">
                 <UserChatHeader name={this.props.name} />
+                <UserChatBodyContainer />
+                <UserChatTextBoxContainer />
         </div>;
      }
  }

@@ -1,5 +1,5 @@
 import openSocket from 'socket.io-client';
-import { SET_USER ,USER_LIST ,SET_ACTIVE_USER} from "./config";
+import { SET_USER ,USER_LIST ,SET_ACTIVE_USER ,SEND_MESSAGE} from "./config";
 
 const  socket = openSocket('http://localhost:8000');
 
@@ -34,4 +34,13 @@ export const setActiveUser = userName =>{
         type:SET_ACTIVE_USER,
         username:userName
     };
+}
+
+export const sendMessage = (name,message) =>{
+    console.log(name,message);
+    return {
+        type:SEND_MESSAGE,
+        to:name,
+        message
+    }
 }
