@@ -1,0 +1,35 @@
+.HomeAddUser{
+    background-color: #e6e2ea;
+    left: 30%;
+    position: fixed;
+    width: 28%;
+    height: 200px;
+    margin-top: 10%;
+    padding-top: 103px;
+    padding-left: 70px;
+    box-shadow: 0px 0px 32px #4f6c71;
+    
+    border-radius: 25px;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.HomeAddUser:hover{
+    -webkit-transform: scale(1.05);
+    box-shadow: 0px 0px 132px #a095e6;
+}
+.HomeAddUserInput{
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c6ccca;
+    color: #04011b;
+    font-size: 20px;
+    padding-left: 20px;
+    font-family: cursive;
+    font-style: italic;
+}
+.HomeAddUserInput:focus{
+    outline: none;
+}
