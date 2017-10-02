@@ -1,0 +1,22 @@
+.UserChatBox{
+    position: absolute;
+    display: block;
+    margin-top: 39%;
+    width: 69%;
+}
+.UserChatBoxInput{
+    width: 98%;
+    height: 30px;
+    border: solid 1px #b7b4b4;
+    background-color: #ecf3c5;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #464848;
+    font-family: sans-serif;
+}
+.UserChatBoxInput:focus {
+    background-color: #EAF5B0;
+    outline: none;
+}

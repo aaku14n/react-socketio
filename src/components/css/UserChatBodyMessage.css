@@ -1,0 +1,28 @@
+.RightMessage{
+    background-color: #60da73;
+    float: left;
+    display: block;
+    clear: both;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.LeftMessage   {
+
+background-color: #c6f37a;
+width: auto;
+float: right;
+clear: both;
+padding-right: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 10px;
+margin-right: 10px;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+max-width: 80%;
+}

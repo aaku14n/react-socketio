@@ -1,8 +1,10 @@
-const UserNameReducers = (state={name:"Aakarsh"},action)=>{
+import { SET_USER } from "../actions/config";
+const UserNameReducers = (state={name:null},action)=>{
+    
     switch(action.type)
     {
-        case "Add_NEW_USER":
-        return Object.assign({},state,{name:action.payload});
+        case SET_USER:
+        return Object.assign({},state,{name:action.name});
         default:
         return state;
     }

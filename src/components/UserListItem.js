@@ -1,20 +1,20 @@
 import React from "react";
 
-
+import "./css/UserListItem.css";
 class UserListItem extends React.Component{
     render(){
-        console.log('fasdjfasdfl');
-        console.log(this.props);
-        return <div className="UserListItem">
+        
+
+        return <div className="UserListItem" key={this.props.index} onClick={(name)=>this.props.setActiveuser(this.props.name)} >
                     <div className="UserListItemIcon">
-                        A
+                    {this.props.icon}  
                     </div>
                     <div className="UserListItemContent">
                         <div className="UserListItemHead">
-                            Aakrsh
+                            {this.props.name}
                         </div>
                         <div className="UserListItemMessage">
-                            I love You
+                           {this.props.message}
                         </div>
                     </div>
             </div>;

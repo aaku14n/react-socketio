@@ -1,3 +1,4 @@
 .UserListBody{
-    color:gray;
+    overflow-y: scroll;
+    height: inherit;
 }
