@@ -18,9 +18,9 @@ export const setUserList = userList => {
       let setUserList = [];
      
     userNameList.map(item => {
-        let message = {};
-         message[item] =  [];
-         setUserList.push(message);
+        let userListTemp = {};
+         userListTemp[item] =  [];
+         setUserList.push(userListTemp);
     });
     
     return {
@@ -36,11 +36,13 @@ export const setActiveUser = userName =>{
     };
 }
 
-export const sendMessage = (name,message) =>{
-    console.log(name,message);
+export const sendMessage = (from,to,message) =>{
+    console.log(message);
+    socket.emit('message', {from,to,message});
     return {
         type:SEND_MESSAGE,
-        to:name,
+        from,
+        to,
         message
     }
 }

@@ -19,6 +19,10 @@ class Home extends React.Component{
         socket.on('userlist',(res)=>{
            this.props.setUserList(res);
         });
+        socket.on('message',(res)=>{
+            console.log('sdfdfd');
+           console.log(res);
+         });
     }
     setUserButton(){
        let name = document.getElementById('UserName').value;
