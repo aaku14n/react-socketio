@@ -7,6 +7,12 @@ class UserListBody extends React.Component{
     render(){
        
         return <div className="UserListBody">
+            {<UserListItem 
+        icon={"B"}
+        name={"Group"} 
+        index={"1"} 
+        message={"none"}
+        setActiveuser={this.props.setActiveUser} />}
             {this.props.userList.map((item, index) =>this.renderListItem(item,index) )}
         </div>;
     }

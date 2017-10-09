@@ -1,6 +1,6 @@
 import {connect } from "react-redux";
 import Home from "../components/home";
-import { setUserName ,setUserList } from "../actions/index";
+import { setUserName ,setUserList, recieveMessage} from "../actions/index";
 
 const mapDispatchToProps = dispatch =>{
     return {
@@ -9,6 +9,9 @@ const mapDispatchToProps = dispatch =>{
         },
         setUserList : chatList => {
             dispatch(setUserList(chatList));
+        },
+        recieveMessage : message =>{
+            dispatch(recieveMessage(message));
         }
     }
 }

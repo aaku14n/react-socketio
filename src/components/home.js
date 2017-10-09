@@ -7,8 +7,6 @@ import Footer from "./footer";
 
 import "./css/Home.css";
 
-
-
 const  socket = openSocket('http://localhost:8000');
 
 class Home extends React.Component{
@@ -16,13 +14,16 @@ class Home extends React.Component{
         super(props);
     }
     componentDidMount(){
+        socket.on('message',(res)=>{
+            console.log(res);
+            this.props.recieveMessage(res);
+            
+        });
         socket.on('userlist',(res)=>{
+            console.log(res);
            this.props.setUserList(res);
         });
-        socket.on('message',(res)=>{
-            console.log('sdfdfd');
-           console.log(res);
-         });
+
     }
     setUserButton(){
        let name = document.getElementById('UserName').value;
