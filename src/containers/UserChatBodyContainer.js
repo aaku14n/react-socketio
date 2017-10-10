@@ -5,7 +5,8 @@ import UserChatBody from "../components/UserChatBody";
 const mapStateToProps = state =>{
     console.log(state);
     return {
-        chat:state.message.message
+        chat:state.message.message,
+        name:state.activeUser.ActiveUser
     };
 };
 

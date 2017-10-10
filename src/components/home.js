@@ -1,6 +1,4 @@
 import openSocket from 'socket.io-client';
-
-// import msinfds af
 import React from "react";
 import Body from "./body";
 import Footer from "./footer";
@@ -15,12 +13,10 @@ class Home extends React.Component{
     }
     componentDidMount(){
         socket.on('message',(res)=>{
-            console.log(res);
-            this.props.recieveMessage(res);
-            
+            this.props.recieveMessage(res);   
         });
         socket.on('userlist',(res)=>{
-            console.log(res);
+            
            this.props.setUserList(res);
         });
 
@@ -40,10 +36,7 @@ class Home extends React.Component{
                     <div className="Main"> 
                         <Body />
                         <Footer />
-               </div>;
-                         
-               
-                
+               </div>;           
 
     }
 }

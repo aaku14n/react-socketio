@@ -12,7 +12,8 @@ class UserListBody extends React.Component{
         name={"Group"} 
         index={"1"} 
         message={"none"}
-        setActiveuser={this.props.setActiveUser} />}
+        setActiveuser={this.props.setActiveUser}
+        key={123123} />}
             {this.props.userList.map((item, index) =>this.renderListItem(item,index) )}
         </div>;
     }
@@ -29,6 +30,7 @@ class UserListBody extends React.Component{
         name={name} 
         index={index} 
         message={message}
+        key={index}
         setActiveuser={this.props.setActiveUser} />);
         }
         
