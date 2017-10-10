@@ -3,9 +3,7 @@ import React from "react";
 import "./css/UserListItem.css";
 class UserListItem extends React.Component{
     render(){
-        
-
-        return <div className="UserListItem" key={this.props.index} onClick={(name)=>this.props.setActiveuser(this.props.name)} >
+        return <div className="UserListItem"  onClick={(name)=>this.props.setActiveuser(this.props.name)} >
                     <div className="UserListItemIcon">
                     {this.props.icon}  
                     </div>
