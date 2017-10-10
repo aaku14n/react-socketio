@@ -1,13 +1,11 @@
 import openSocket from 'socket.io-client';
 
-
+// import msinfds af
 import React from "react";
 import Body from "./body";
 import Footer from "./footer";
 
 import "./css/Home.css";
-
-
 
 const  socket = openSocket('http://localhost:8000');
 
@@ -16,9 +14,16 @@ class Home extends React.Component{
         super(props);
     }
     componentDidMount(){
+        socket.on('message',(res)=>{
+            console.log(res);
+            this.props.recieveMessage(res);
+            
+        });
         socket.on('userlist',(res)=>{
+            console.log(res);
            this.props.setUserList(res);
         });
+
     }
     setUserButton(){
        let name = document.getElementById('UserName').value;

@@ -4,15 +4,16 @@ import UserChatBox from "../components/UserChatBox";
 
  const mapDispatchToProps = dispatch =>{
      return {
-         sendMessage :(name, message) =>{
-             dispatch(sendMessage(name,message));
+         sendMessage :(from,to, message) =>{
+             dispatch(sendMessage(from,to,message));
          }
      }
  }
 
  const mapStateToProps = state =>{
      return {
-         name : state.activeUser.ActiveUser
+         from:state.name.name,
+         to : state.activeUser.ActiveUser
      }
  }
  const UserChatTextBoxContainer = connect(mapStateToProps,mapDispatchToProps)(UserChatBox);

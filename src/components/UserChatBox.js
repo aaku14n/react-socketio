@@ -5,7 +5,7 @@ class UserChatBox extends React.Component{
     sendMessage(e){
         if(e.key === 'Enter'){
             
-            this.props.sendMessage(this.props.name,e.target.value);
+            this.props.sendMessage(this.props.from,this.props.to,e.target.value);
         }
     }
     render(){
